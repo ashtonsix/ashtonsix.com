@@ -1,0 +1,3 @@
+todo:
+
+- favicon / social previews

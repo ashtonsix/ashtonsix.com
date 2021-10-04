@@ -1,0 +1,14 @@
+{
+  "name": "ashtonsix.com-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node resume-watch.js",
+    "build": "node resume-build.js"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.2",
+    "marked": "^0.8.0",
+    "puppeteer": "^2.0.0"
+  }
+}

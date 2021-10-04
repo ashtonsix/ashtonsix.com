@@ -1,0 +1,22 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "description": "",
+  "author": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "next -p 3001",
+    "build": "next build",
+    "postbuild": "rm -rf ../ashtonsix.com/build/x/pricepaid && mv -T build ../ashtonsix.com/build/x/pricepaid",
+    "start": "next start -p 3001"
+  },
+  "dependencies": {
+    "color-interpolate": "^1.0.5",
+    "leaflet": "^1.6.0",
+    "next": "^9.2.0",
+    "normalize.css": "^8.0.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
