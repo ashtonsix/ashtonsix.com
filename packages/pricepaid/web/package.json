@@ -7,8 +7,8 @@
   "private": true,
   "scripts": {
     "dev": "next -p 3001",
-    "build": "next build",
-    "postbuild": "rm -rf ../ashtonsix.com/build/x/pricepaid && mv -T build ../ashtonsix.com/build/x/pricepaid",
+    "build": "next build && next export -o build",
+    "postbuild": "rm -rf ../../../build/x/pricepaid && mv -T build ../../../build/x/pricepaid",
     "start": "next start -p 3001"
   },
   "dependencies": {

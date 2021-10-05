@@ -1,12 +1,13 @@
 import React from 'react'
 import Header from 'components/Header'
 import Text from 'components/Text'
+import axolotl from 'components/axolotl.jpg'
 
 const DayBrighten = () => {
   return (
     <>
       <img
-        src="/axolotl.jpg"
+        src={axolotl}
         alt=""
         css={`
           display: block;

@@ -1,26 +1,10 @@
 import React from 'react'
-import Apollo from 'Apollo'
-import gql from 'graphql-tag'
 import {faSyncAlt, faShare} from '@fortawesome/free-solid-svg-icons'
 
 import Input from 'components/Input'
 
-const defaultServerName = gql`
-  query defaultServerName {
-    generateDefaultPrettyName {
-      prettyName
-      prettyNameLink
-      instanceAddress
-    }
-  }
-`
-
-const fetchPrettyName = async () => {
-  const {data} = await Apollo.client.query({
-    query: defaultServerName,
-    fetchPolicy: 'no-cache'
-  })
-  return data.generateDefaultPrettyName
+const fetchPrettyName = () => {
+  return fetch('/api/server-name').then(res => res.json())
 }
 
 const maybeOpenLink = el => {

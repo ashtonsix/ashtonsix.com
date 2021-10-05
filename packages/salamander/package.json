@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "PORT=3003 react-app-rewired start --config-overrides webpack.config.dev",
     "build": "node build.js",
-    "postbuild": "rm -rf ../ashtonsix.com/build/x/salamander && mv -T build ../ashtonsix.com/build/x/salamander",
+    "postbuild": "rm -rf ../../build/x/salamander && mv -T build ../../build/x/salamander",
     "test": "react-app-rewired test --config-overrides webpack.config.dev --env=jsdom",
     "storybook": "start-storybook -p 6300 -c .storybook -s src"
   },
@@ -17,6 +17,7 @@
     "not ie <= 11",
     "not op_mini all"
   ],
+  "homepage": "/x/salamander",
   "dependencies": {
     "@babel/plugin-proposal-optional-chaining": "^7.0.0-beta.52",
     "@fortawesome/fontawesome-svg-core": "^1.2.0-14",

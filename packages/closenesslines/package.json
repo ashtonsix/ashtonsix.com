@@ -22,10 +22,11 @@
     "twitter-lite": "^0.11.0",
     "use-debounce": "^3.4.2"
   },
+  "homepage": "/x/closenesslines",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "rm -rf ../ashtonsix.com/build/x/closenesslines && mv -T build ../ashtonsix.com/build/x/closenesslines",
+    "postbuild": "rm -rf ../../build/x/closenesslines && mv -T build ../../build/x/closenesslines",
     "get-twitter-token": "node getTwitterToken.js"
   },
   "eslintConfig": {

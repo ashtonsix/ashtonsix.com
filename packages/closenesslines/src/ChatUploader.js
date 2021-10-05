@@ -64,7 +64,7 @@ const parseTwitterChats = async (zip) => {
     .slice(0, 100)
   try {
     const response = await Promise.race([
-      axios.post('/api/get-twitter-names', {ids: senderIds}),
+      axios.get('/api/twitter-names?ids=' + senderIds.join(',')),
       new Promise((resolve) => setTimeout(() => resolve({}), 5000)),
     ])
     const senderNameMap = response.data

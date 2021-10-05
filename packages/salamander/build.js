@@ -51,23 +51,12 @@ const main = async () => {
   try {
     await checkBrowsers(paths.appPath, isInteractive)
     fs.emptyDirSync(paths.appBuild)
-    fs.emptyDirSync(paths.ssrBuild)
     fs.copySync(paths.appPublic, paths.appBuild, {
       dereference: true,
       filter: file => file !== paths.appHtml
     })
 
     await buildAndReport(appConfig)
-    await buildAndReport(ssrConfig)
-
-    const packages = (...dir) => path.resolve(__dirname, '../', ...dir)
-    const apollo = packages.bind(null, 'salamander-apollo/public/react')
-    const react = packages.bind(null, 'salamander-react/build')
-
-    const gitignore = await fs.readFile(apollo('.gitignore'), 'utf8')
-    await fs.remove(apollo())
-    await fs.copy(react(), apollo())
-    await fs.outputFile(apollo('.gitignore'), gitignore)
   } catch (err) {
     if (err && err.message) {
       console.log(err.message)

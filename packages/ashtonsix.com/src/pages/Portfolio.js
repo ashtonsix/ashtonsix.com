@@ -23,7 +23,7 @@ const Home = () => {
         </a>
         . It is no longer available, but you can still{' '}
         {/* <a href="/p/salamander">read about it</a>, and{' '} */}
-        <a href="/f/salamander">see what it looked like</a>.
+        <a href="/p/salamander">see what it looked like</a>.
       </p>
       <h2>Closeness Lines</h2>
       <p>
@@ -47,6 +47,17 @@ const Home = () => {
           href="https://github.com/ashtonsix/price-paid"
         >
           source
+        </a>
+      </p>
+      <h2>Can You Sell Science?</h2>
+      <p>
+        An article about NFTs.{' '}
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://ashtonsix.substack.com/p/nft-science"
+        >
+          /p/nft-science
         </a>
       </p>
     </div>
